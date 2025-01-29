@@ -1,0 +1,68 @@
+﻿<Window x:Class="HTBGamesLauncher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HTBGamesLauncher"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1275"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None" Background="#FF1A1A1A">
+    <Grid>
+        <StackPanel
+    HorizontalAlignment="Right"
+    VerticalAlignment="Top"
+    Orientation="Horizontal"
+    FlowDirection="RightToLeft"
+    Margin="5">
+            <Button
+        x:Name="CloseButton"
+        Style="{StaticResource WindowButtonsStyle}"
+        Content="{StaticResource close_ico}"
+        Click="Button_Click"
+        Tag="IsCloseButton"/>
+            <Button
+        x:Name="RestoreButton"
+        Margin="10,0"
+        Click="RestoreButton_Click"
+        Tag="IsCloseButton">
+                <Button.Style>
+                    <Style
+            TargetType="{x:Type Button}"
+            BasedOn="{StaticResource WindowButtonsStyle}">
+                        <Setter Property="Content" Value="{StaticResource restore_ico}"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding ElementName=login, Path=WindowState}" Value="Maximized">
+                                <Setter Property="Content" Value="{StaticResource maximize_ico}"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Button
+        x:Name="MinimizeButton"
+        Style="{StaticResource WindowButtonsStyle}"
+        Content="{StaticResource minimize_ico}"
+        Click="MinimizeButton_Click"/>
+        </StackPanel>
+        <MediaElement
+    Height="97"
+    Source="Assets/HTBTVAppLoading1.gif"
+    Stretch="Uniform"
+    HorizontalAlignment="Center"
+    VerticalAlignment="Center"
+    LoadedBehavior="Play"
+    UnloadedBehavior="Manual"
+    Visibility="Visible"/>
+
+        <TextBlock
+    HorizontalAlignment="Center"
+    VerticalAlignment="Center"
+    Margin="0,150,0,0"
+    Foreground="White"
+    FontSize="16"
+    FontWeight="Bold"
+    Text="We're building and contrusting our game launcher platform..."/>
+    </Grid>
+</Window>

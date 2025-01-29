@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>htb_icon_ult_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\banner_htbin.jpg" />
+    <None Remove="Assets\HTBTVAppLoading.gif" />
+    <None Remove="Assets\HTBTVAppLoading1.gif" />
+    <None Remove="Assets\HTB_TV_Logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\banner_htbin.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\HTBTVAppLoading.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\HTBTVAppLoading1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\HTB_TV_Logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="htb_icon_ult_icon.ico" />
+  </ItemGroup>
+
+</Project>
