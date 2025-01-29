@@ -1,2 +1,2 @@
 # HTB-Games-Launcher
-An Game Launcher Platforms for Upcoming HTB Games
+An Game Launcher Platform for Upcoming HTB Games
